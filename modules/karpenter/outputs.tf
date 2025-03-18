@@ -65,15 +65,6 @@ output "node_iam_role_unique_id" {
 }
 
 ################################################################################
-# Access Entry
-################################################################################
-
-output "node_access_entry_arn" {
-  description = "Amazon Resource Name (ARN) of the node Access Entry"
-  value       = try(aws_eks_access_entry.node[0].access_entry_arn, null)
-}
-
-################################################################################
 # Node IAM Instance Profile
 ################################################################################
 
